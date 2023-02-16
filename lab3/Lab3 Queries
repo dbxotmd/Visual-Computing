@@ -1,0 +1,37 @@
+Introduction to Visual Computing                Taeseung You
+Lab3
+Queries
+Experiment with your code to find the answers to the following questions. Write your
+answers in a separate document.
+
+1. Is Otsu’s method successful in thresholding all the images?
+otsu's method is not always successful for every images. I could observe the most of images are quite successful for recognising the background. however, otsu method can't extract the detail of the image  For example, the image of optic nerve head is quite ambiguous to recoginise the vein and how it looks like. except that, otsu method is quite successful making two classes of fore ground and back ground in other images.
+
+2. How would you modify the thresholding algorithm to address any problems?
+
+For binary threshold, It's useful to make images all clear if some images are a bit unclear.
+For invert binary threshold, It's useful to check which objects in the images are clear in the image.
+For truncate method,this algorithm depends on threshold value. max value is ignored.
+To zero algorithm, if source pixel is greater than threshold,set pixel value and also max value is ignored.
+To zero inverted is the opposite of to zero algorithm. if source pixel is greater than threshold, then set to zero.
+
+In my perspective, binary and invert binary is good for finding background.
+For truncate method, It's generally good for finding foreground.Basically, To zero inverted and truncate can't find difference.
+To zero and To Zero inverted are also quite useful for finding foreground. 
+
+
+For otsu'algorithm, Otsu's method performs badly in case of heavy noise, small objects size, inhomogeneous lighting and larger intra-class than inter-class variance so give a variation for heavy noise,unbalanced images and otsu method peform well when the histogram  has a bimodal distribution so using Matlab implementation to make it histogram has the distribution. And also sub divide the images.
+ 
+
+3. What metrics are there for assessing the success of thresholding?
+
+Depends on what I've run it,
+background intensity, object size, object position and noise can be the metrices for assessing the success of thresholding.
+if object size is bigger of noise is lower something like this, then I think the images looks more vivid and more better.
+And how much can we observe the image clearly also can be one of the metrics 
+
+
+
+
+
+
